@@ -21,6 +21,7 @@ public class SearchServiceImpl implements SearchService {
             .filter(l -> l.getLocation().getCity().equalsIgnoreCase(city))
             .filter(l -> l.getPrice() >= minPrice && l.getPrice() <= maxPrice)
             .filter(l -> isAvailable(l, startDate, endDate))
+            
             .collect(Collectors.toList());
     }
 
@@ -31,7 +32,7 @@ public class SearchServiceImpl implements SearchService {
             .allMatch(a -> a.isAvailable());
     }
 
-    
+
 
 
 }
