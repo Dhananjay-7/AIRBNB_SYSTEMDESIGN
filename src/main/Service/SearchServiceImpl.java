@@ -32,6 +32,8 @@ public class SearchServiceImpl implements SearchService {
             .allMatch(a -> a.isAvailable());
     }
 
+    // public static void main(String[] args) {
+
 
 
 
